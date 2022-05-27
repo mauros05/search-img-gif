@@ -1,0 +1,27 @@
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <div class="col-12">
+      <h1 id="title">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+        Searcher
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </h1>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container-lg d-flex justify-content-center">
+  <div>
+    <div>
+      <%= form_with url: "/search", method: :post do |f| %>
+        <div class="search-form-control form-group">
+          <%= f.text_field :search, class:"form-control string required", id:"search_query"  %>
+          <%= f.submit "Search", class:"btn btn-flat" %>
+        </div>
+      <% end %>
+  </div>
+  </div>
+</div>
